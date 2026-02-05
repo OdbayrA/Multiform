@@ -1,4 +1,4 @@
-export const Input = ({ label, formName, onChange, type, name }) => {
+export const Input = ({ label, formName, onChange, type, name, error }) => {
   return (
     <div className="flex flex-col gap-2">
       <label>{label}</label>
@@ -10,6 +10,7 @@ export const Input = ({ label, formName, onChange, type, name }) => {
         value={formName}
         onChange={onChange}
       />
+      <p className="text-red-500">{error}</p>
     </div>
   );
 };
